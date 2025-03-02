@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .profile-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 40%;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+
+  .profile-info h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .profile-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .kontak {
+    background: #12f01a;
+  }
+
+  .isi p {
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #6012f0;
+  }
