@@ -6,19 +6,34 @@ $doctor = $result->fetch_assoc();
 
 if (isset($_POST['update'])) {
     $nama_dokter = $_POST['nama_dokter'];
-    $no_telp = $_POST['no_telp'];
+    $keterangan_dokter = $_POST['keterangan_dokter'];
 
-    $sql = "UPDATE dokter_gigi SET nama_dokter='$nama_dokter', no_telp='$no_telp' WHERE id_dokter=$id";
+    $target_dir = "profildokter/";
+    if (!empty($_FILES["foto_dokter"]["name"])) {
+        
+        $target_file = $target_dir . basename($_FILES["foto_dokter"]["name"]);
+    if (move_uploaded_file($_FILES["foto_dokter"]["tmp_name"], $target_file)) {
+        $foto_dokter = $target_file;
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+        exit;
+    }
+
+    $sql = "UPDATE dokter_gigi SET nama_dokter='$nama_dokter', keterangan_dokter='$keterangan_dokter', foto_dokter='$foto_dokter' WHERE id_dokter=$id";
+    } else {
+        $sql = "UPDATE dokter_gigi SET nama_dokter='$nama_dokter', keterangan_dokter='$keterangan_dokter' WHERE id_dokter=$id";
+    } 
     if ($conn->query($sql) === TRUE) {
-        header("Location: readdokter.php");
+        header("Location: listdokteradm.php");
     } else {
         echo "Error: " . $conn->error;
     }
 }
 ?>
 
-<form method="post">
-    Nama Dokter: <input type="text" name="nama_dokter" value="<?= $doctor['nama_dokter'] ?>" required><br>
-    No. Telepon: <input type="text" name="no_telp" value="<?= $doctor['no_telp'] ?>" required><br>
+    <form method="post" enctype="multipart/form-data">
+        Nama Dokter: <input type="text" name="nama_dokter" value="<?= $doctor['nama_dokter'] ?>" required><br>
+        keterangan_dokter: <input type="text" name="keterangan_dokter" value="<?= $doctor['keterangan_dokter'] ?>" required><br>
+        Foto Dokter: <input type="file" name="foto_dokter"required><br>
     <input type="submit" name="update" value="Update Dokter">
 </form>

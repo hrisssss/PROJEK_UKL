@@ -1,47 +1,31 @@
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: rgb(6, 146, 104);
+.macbook-pro-14-1 {
+  	width: 100%;
+  	position: relative;
+  	background-color: #1bc5cb;
+  	height: 900px;
+  	overflow: hidden;
+  	text-align: center;
+  	font-size: 35px;
+  	color: #000;
+  	font-family: Poppins;
 }
 
-h1{
+.macbook-pro-14-1-child {
+	position: absolute;
+	align-content: center;
+  	top: calc(50% - 221px);
+  	left: calc(50% - 250px);
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 30px;
+  	background-color: #25e7b9;
+  	width: 500px;
+	height: 442px;
+}
+
+.selamat-datang-di {
+  	position: relative;
+  	top: 145px;
     text-align: center;
-    text-transform: 300;
-}
-
-.tulisan_login{
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.kotak_login{
-    width: 400px;
-    background: aliceblue;
-    margin: 80px auto;
-    padding: 30px 20px;
-    border-radius: 5%;
-}
-
-label{
-    font-size: 12pt;
-    color: rgb(1, 156, 92);
-}
-
-.form_login{
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px;
-    font-size: 11pt;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-.tombol_login{
-    background: rgb(153, 145, 145);
-    color: rgb(16, 214, 131);
-    font-size: 11pt;
-    width: 100%;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    cursor: pointer;
+  	font-size: 30px;
+  	color: #fff;
 }
