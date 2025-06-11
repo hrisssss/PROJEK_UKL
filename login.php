@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,28 +12,27 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="macbook-pro-14-1">
-                            <p class="selamat-datang-di"> SELAMAT DATANG DI DENTAL HEALTH</p>
-        <div class="macbook-pro-14-1-child">
+    <div>
+        <p>SELAMAT DATANG DI DENTAL HEALTH</p>
+    <div>
         <form action="ceklogin.php" method="post" role="form">
             <label>Username</label>
-            <input type="text" name="nama" class="form_login" placeholder="Username" autocomplete="off">
+            <input type="text" name="nama" placeholder="Username" autocomplete="off">
             <br>
             <br>
             <br>
             <label>Password</label>
-            <input type="password" name="passwod" class="form_login" placeholder="password" autocomplete="off" required>
+            <input type="password" name="passwod" placeholder="password" autocomplete="off" required>
             <br>
+            
             <button type="submit">
                 Login
             </button>
-            <button>
-            <a href="daftar.php">Daftar</a>
-            </button>
+            
+            <a href="daftar.php">belum punya akun?</a>
         </form>
-        </div>
-
-
+    </div>
+    <a class="back" href="beranda.php">Beranda</a>
     </div>
     </body>
 </html>

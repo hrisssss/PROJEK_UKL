@@ -14,10 +14,15 @@ $sql = "SELECT * FROM logins ORDER BY id_user DESC";
 <html>
 <head>
     <title>List User</title>
-    <link rel="stylesheet" type="text/css" href="pesan.css">
+    <link rel="stylesheet" type="text/css" href="listartikel.css">
 </head>
 <body>
-    <h2>Pesan Inbox</h2>
+    <a href="daftar.php">Tambah user</a>
+    <br>
+    <br>
+    <a href="admin.php">Kembali</a>
+    <div class="container">
+    <h2>List user</h2>
     <?php if ($result->num_rows > 0): ?>
         <table border="1" cellpadding="10" cellspacing="0">
             <thead>
@@ -25,6 +30,7 @@ $sql = "SELECT * FROM logins ORDER BY id_user DESC";
                     <th>ID_USER</th>
                     <th>Username</th>
                     <th>Password</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,8 +50,6 @@ $sql = "SELECT * FROM logins ORDER BY id_user DESC";
     <?php else: ?>
         <p>Tidak ada user baru.</p>
     <?php endif; ?>
-
-    <a href="admin.php">Kembali</a>
-
+    </div>
 </body>
 </html>

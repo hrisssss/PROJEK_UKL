@@ -9,7 +9,7 @@
 .footer {
     background: var(--black);
     color: var(--white);
-    padding: 3rem 5%;
+    padding: 0.8rem 5%;
 }
 
 .footer-grid {
@@ -36,4 +36,28 @@
     height: 295px;
     background: #ddd;
     margin-top: 1rem;
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+}
+
+.tombol {
+    text-decoration: none;
+}
+
+.tombol:hover {
+    color: var(--teal);
+    text-decoration: underline;
 }

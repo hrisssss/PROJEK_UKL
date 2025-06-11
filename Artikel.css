@@ -1,67 +1,86 @@
-.inti p {
-    text-align: left;
-    padding-right: 700px;
-    margin-left: 50px;
-    font-size: 15px;
+body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    color: var(--black);
-    line-height: 1.5;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-.inti h1{
-    margin-left: 100px;
-    font-size: 35px;
-    font-family: Arial, sans-serif;
-    color: var(--black);
+h1.inti {
     text-align: center;
-    margin-right: 200px;
-}
-
-:root {
-    --teal: #20B2AA;
-    --dark-teal: #178F89;
-    --white: #ffffff;
-    --black: #333333;
-    --light-gray: #f5f5f5;
-}
-
-.navbar {
-    background: rgb(226, 226, 226);
-    padding: 0.9rem 4%;
     color: black;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 500;
+    margin-top: 30px;
+    font-size: 32px;
+}
+
+
+img {
+    display: block;
+    margin: 20px auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width : 700px; 
+    height : 300px; 
+    object-fit: cover;
+}
+
+p.inti {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 10px 20px;
     font-size: 18px;
+    background-color: #ffffff;
+    border-left: 4px solid #20B2AA;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    margin-right: 500px;
+@media (max-width: 768px) {
+    img {
+        width: 90%;
+        height: auto;
+    }
+
+    p.inti {
+        font-size: 16px;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.navbar-links:hover:not(.active) {
-    background: #111313;
-    color: black;
-}
-
-.nav-links.active {
-    color: white;
-    background-color: #04AA6D;
-  }
-
-.logo {
-    font-size: 1.5rem;
-    color: var(--teal);
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-}
-
-.nav-links a {
-    color: var(--black);
+        .back {
+    display: inline-block;
+    padding: 1rem 1rem;
+    border-radius: 10px;
     text-decoration: none;
-    margin-left: 2rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 16px;
+    color: white;
+    background-color: #20B2AA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+        }
+
+
+   .back:hover {
+    background-color: white;
+    color: #20B2AA;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+.back-container {
+    text-align: center;
+    margin-top: 30px;
+        justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
 }

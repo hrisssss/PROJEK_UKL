@@ -35,10 +35,12 @@ $mail = mysqli_query($conn, "SELECT * FROM jadwal_konsultasi");
 <head>
     <meta charset="UTF-8">
     <title>list_jadwal</title>
+    <link rel="stylesheet" href="editjdwl.css">
 
 </head>
 <body>
     <div class="form-container">
+           <a href="listjadwal.php">kembali</a>
         <h2>List jadwal</h2>
         <form method="post">
             <input type="hidden" name="id_jadwal_konsultasi" value="<?= $row['id_jadwal_konsultasi'] ?>">
@@ -83,9 +85,8 @@ $mail = mysqli_query($conn, "SELECT * FROM jadwal_konsultasi");
             </div>
 
             <button type="submit">Update</button>
-
         </form>
-    </div>
+    </div>  
 </body>
 </html>
 </html>

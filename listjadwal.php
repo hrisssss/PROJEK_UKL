@@ -7,9 +7,14 @@ $sql = "SELECT * FROM jadwal_konsultasi ORDER BY id_jadwal_konsultasi";
 ?>
 
 <!DOCTYPE html>
+<link rel="stylesheet" href="listartikel.css">
 <html>
 <body>
-    <h2>Formulir anda</h2>
+<br>
+<br>
+<a href="admin.php">Kembali</a>
+    <div class="container">
+    <h2>Formulir users</h2>
     <?php if ($result->num_rows > 0): ?>
         <table border="1" cellpadding="10" cellspacing="0">
             <thead>
@@ -21,6 +26,8 @@ $sql = "SELECT * FROM jadwal_konsultasi ORDER BY id_jadwal_konsultasi";
                     <th>Tanggal</th>
                     <th>Status</th>
                     <th>Dokter yang di pilih</th>
+                    <th>ID User</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,6 +40,7 @@ $sql = "SELECT * FROM jadwal_konsultasi ORDER BY id_jadwal_konsultasi";
                     <td><?php echo nl2br(htmlspecialchars($row['tanggal_konsul'])); ?></td>
                     <td><?php echo nl2br(htmlspecialchars($row['status_konsul'])); ?></td>
                     <td><?php echo nl2br(htmlspecialchars($row['id_dokter'])); ?></td>
+                    <td><?php echo nl2br(htmlspecialchars($row['id_user'])); ?></td>
                     <td>
                         <a href="editjadwal.php?id=<?php echo $row['id_jadwal_konsultasi']; ?>">Edit</a> |
                         <a href="deletejadwal.php?id=<?php echo $row['id_jadwal_konsultasi']; ?>" onclick="return confirm('Yakin ingin menghapus jadwal forlmulir ini?');">Hapus jadwal</a>
@@ -42,10 +50,8 @@ $sql = "SELECT * FROM jadwal_konsultasi ORDER BY id_jadwal_konsultasi";
             </tbody>
         </table>
     <?php else: ?>
-        <p>Anda belum membuat jadwal konsultasi</p>
+        <p>Belum ada jadwal konsultasi</p>
     <?php endif; ?>
-
-    <a href="admin.php">kembali</a>
-
+    </div>
 </body>
 </html>

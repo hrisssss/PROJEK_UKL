@@ -39,8 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Buat Pesan Inbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inbox.css">
 </head>
 <body>
+    <a href="pesanadmin.php">Kembali</a>
     <h2>Buat Pesan Inbox</h2>
 
     <form method="post" action="">

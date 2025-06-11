@@ -1,31 +1,114 @@
-.macbook-pro-14-1 {
-  	width: 100%;
-  	position: relative;
-  	background-color: #1bc5cb;
-  	height: 900px;
-  	overflow: hidden;
-  	text-align: center;
-  	font-size: 35px;
-  	color: #000;
-  	font-family: Poppins;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #00c8c8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.macbook-pro-14-1-child {
-	position: absolute;
-	align-content: center;
-  	top: calc(50% - 221px);
-  	left: calc(50% - 250px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  	border-radius: 30px;
-  	background-color: #25e7b9;
-  	width: 500px;
-	height: 442px;
-}
-
-.selamat-datang-di {
-  	position: relative;
-  	top: 145px;
+p {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
     text-align: center;
-  	font-size: 30px;
-  	color: #fff;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: #2bd9b7;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+	max-width: 100%;
+	padding: 50px 75px ;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+label {
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+	margin-right: 80px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 13px 25px;
+    margin-top: 30px;
+	margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: #00c8c8;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00a0a0;
+    color: white;
+	transition: all 0.3s ease;
+	transform: translateY(-3px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+a {
+	display: inline-block;
+	margin-top: 20px;
+	color: blue;
+	font-style: italic;
+	transition: color 0.3s ease;
+}
+
+form small {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+}
+
+.back {
+    padding: 13px 23px;
+    margin-top: 30px;
+	margin-right: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: #00c8c8;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 220px ;
+}
+
+.back:hover {
+    background-color: #00a0a0;
+    color: white;
+	transition: all 0.3s ease;
+	transform: translateY(-3px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

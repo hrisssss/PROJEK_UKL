@@ -1,0 +1,112 @@
+.formulir-container {
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f7f7f7;
+}
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main.formulirjdwl {
+    flex: 1;
+    padding: 20px;
+}
+
+
+    .tabel-user {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 50px;
+    }
+
+    .tabel-user th, .tabel-user td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .tabel-user th {
+        background-color: #20B2AA;
+        color: white;
+        font-weight: bold;
+    }
+
+    .tabel-user tr:hover {
+        background-color: #eef;
+    }
+
+        .button {
+    padding: 1rem 0.8rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 16px;
+    color: white;
+    background-color: #20B2AA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    margin-top: 30px;
+    position: relative;
+    bottom: 20px;
+        }
+
+
+   .button:hover {
+    background-color: white;
+    color: #20B2AA;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .tabel-user td a {
+        padding: 8px 10px;
+        border-radius: 4px;
+        background-color: #20B2AA;
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+        font-weight: 500;
+    }
+
+    .tabel-user td a:hover {
+        background-color: whitesmoke;
+        color: #20B2AA;
+    }
+
+    .tabel-user td a:last-child {
+        background-color: #20B2AA;
+    }
+
+    .tabel-user td a:last-child:hover {
+        background-color: whitesmoke;
+    }
+
+    .tdk-jadwal {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}

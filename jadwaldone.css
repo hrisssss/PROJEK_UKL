@@ -1,14 +1,80 @@
-@keyframes slideUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .slide-up {
-  animation: slideUp 3s ease-out forwards;
+    background-color: #e0fff8;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: slideUp 1.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}
+
+        a {
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 16px;
+    color: white;
+    background-color: #20B2AA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+        }
+
+
+   a:hover {
+    background-color: white;
+    color: #20B2AA;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    color: #888;
 }

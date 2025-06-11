@@ -9,10 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_mail = $_POST['id_mail'];
     $judul_mail = $_POST['judul_mail'];
     $isi_mail = $_POST['isi_mail'];
-    $id_user = $_POST['id_user'];
+    $status = $_POST['status'];
+
+
 
     $sql = "UPDATE mail 
-            SET judul_mail='$judul_mail', isi_mail='$isi_mail', id_user='$id_user'
+            SET judul_mail='$judul_mail', isi_mail='$isi_mail', status='$status'
             WHERE id_mail='$id_mail'";
 
     if ($conn->query($sql) === TRUE) {
@@ -30,10 +32,13 @@ $mail = mysqli_query($conn, "SELECT * FROM mail");
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inbox.css">
     <title>Edit Pesan</title>
 
 </head>
 <body>
+    <a href="pesanadmin.php">kembali</a>
     <div class="form-container">
         <h2>Edit Pesan</h2>
         <form method="post">
@@ -47,10 +52,6 @@ $mail = mysqli_query($conn, "SELECT * FROM mail");
             <div class="form-group">
                 <label>Isi mail:</label>
                 <input type="text" name="isi_mail" value="<?= $row['isi_mail'] ?>" required>
-            </div>
-            <div class="form-group">
-                <label>id user:</label>
-                <input type="text" name="id_user" value="<?= $row['id_user'] ?>" required>
             </div>
 
             <button type="submit">Update</button>

@@ -4,7 +4,8 @@ include 'config.php';
 if (isset($_POST['create'])) {
     $nama_dokter = $_POST['nama_dokter'];
     $keterangandktr = $_POST['keterangan_dokter'];
-    $no_wa_dokter = $_POST['no_dokter'];
+    $no_dokter = $_POST['no_dokter'];
+    $harga = $_POST['harga'];
     
 
     $target_dir = "profildokter/";
@@ -17,38 +18,44 @@ if (isset($_POST['create'])) {
         exit;
     }
 
-    $sql = "INSERT INTO dokter_gigi (nama_dokter, keterangan_dokter, foto_dokter, no_dokter) VALUES ('$nama_dokter', '$keterangandktr', '$foto_dokter', '$no_wa_dokter')";
+$sql = "INSERT INTO dokter_gigi (nama_dokter, keterangan_dokter, foto_dokter, no_dokter, harga) VALUES ('$nama_dokter', '$keterangandktr', '$foto_dokter', '$no_dokter', '$harga')";
     
     if ($conn->query($sql) === TRUE) {
-    $nama = $_POST['nama'];
-    $password = $_POST['passwod'];
-
-    $sql = "INSERT INTO logins (nama, passwod) VALUES ('$nama', '$password')";
-
-    $cek = $conn->query("SELECT * FROM logins WHERE nama='$nama'");
-    if ($cek->num_rows > 0) {
-        echo '<script language="javascript">
-        alert("⚠️ Error: Data Sudah Ada!");
-        </script>';
-        
-    } else {
-        if ($conn->query($sql) === FALSW) {            
-            echo "Gagal Daftar" . $conn->error;
-        }    }
- }
-        header("Location: listdokteradm.php");
+                    header("Location: listdokteradm.php");
     } else {
         echo "Error: " . $conn->error;
     }
-}
-
-
+        }
 
 ?>
-<form method="post" enctype="multipart/form-data">
-    Nama Dokter: <input type="text" name="nama_dokter" required><br>
-    keterangan Dokter: <input type="text" name="keterangan_dokter" required><br>
-    Foto Dokter: <input type="file" name="foto_dokter" required><br>
-    No WhatsApp Dokter: <input type="text" name="no_dokter" required><br>
-    <input type="submit" name="create" value="Tambah Dokter">
-</form>
+<html>
+<head>
+    <title>Tambah Dokter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="createdokter.css">
+</html>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <a href="listdokteradm.php">Kembali</a>
+        <h2>Tambah Dokter</h2>
+
+        <label for="nama_dokter">Nama Dokter:</label>
+        <input type="text" name="nama_dokter" id="nama_dokter" required>
+
+        <label for="keterangan_dokter">Keterangan Dokter:</label>
+        <input type="text" name="keterangan_dokter" id="keterangan_dokter" required>
+
+        <label for="foto_dokter">Foto Dokter:</label>
+        <input type="file" name="foto_dokter" id="foto_dokter" required>
+        
+        <label for="no_dokter">No. Dokter (format: 62XXXXXXXXXX):</label>
+        <input type="text" name="no_dokter" id="no_dokter"
+       maxlength="15" pattern="62\d{8,13}" required>
+
+        <label for="harga">Biaya Konsul:</label>
+        <input type="text" name="harga" id="harga" required>
+
+        <input type="submit" name="create" value="Tambah Dokter">
+    </form>
+</body>

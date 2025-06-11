@@ -48,26 +48,27 @@
     <title>Daftar</title>
 </head>
 <body>
-    <div class="macbook-pro-14-1">
-                            <p class="selamat-datang-di"> SELAMAT DATANG DI DENTAL HEALTH</p>
-        <div class="macbook-pro-14-1-child">
+    <div>
+        <p>SELAMAT DATANG DI DENTAL HEALTH</p>
+    <div>
         <form action="daftar.php" method="post">
-            <label>Buat username</label>
-            <input type="text" name="nama" class="form_login" placeholder="Username" autocomplete="off">
+            <label>Username baru</label>
+            <input type="text" name="nama" placeholder="Username" autocomplete="off">
             <br>
             <br>
             <br>
-            <label>Buat password</label>
-            <input type="password" name="passwod" class="form_login" placeholder="password" autocomplete="off" required>
+            <label>Password baru</label>
+            <input type="password" name="passwod" placeholder="password" autocomplete="off" required>
             <br>
+    
             <button type="submit" name="buat">
                 Daftar
             </button>
+            
             <a href="login.php">Sudah punya akun?</a>
         </form>
-        </div>
-
-
+    </div>
+    <a class="back" href="beranda.php">Beranda</a>
     </div>
     </body>
 </html>
